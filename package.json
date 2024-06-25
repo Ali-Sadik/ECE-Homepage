@@ -1,0 +1,20 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:homepage": "cd Homepage && npm start",
+    "start:contribution": "cd Contribution && npm start",
+    "start:student": "cd Student && npm start",
+    "start:teacher": "cd Teacher && npm start",
+    "start:all": "npm-run-all -p start:homepage start:contribution start:student start:teacher"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "npm-run-all": "^4.1.5"
+  }
+}

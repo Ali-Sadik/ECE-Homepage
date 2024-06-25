@@ -1,0 +1,1051 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1st year</title>
+    <style>
+  
+        body {
+          /* display: grid; */
+         background: #fff;
+          place-items: center;
+          font-family: 'Manrope', sans-serif;
+          font-size: 16px;
+        }
+  
+        .card {
+  background: #ffffff;
+  border-radius: 0.5rem;
+  padding: 25px;
+  margin: 0; /* Ensure no margin */
+}
+
+#progress-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: transparent;
+        z-index: 9999;
+      }
+
+      #progress-bar {
+        height: 4px;
+        background-color: #00a651;
+        width: 0;
+        animation: progressBarAnimation 1s forwards;
+      }
+
+      @keyframes progressBarAnimation {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+.notification {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  background: #00a651;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 16px 25px -10px rgba(83, 92, 181, 0.25);
+  margin: 0; /* Ensure no margin */
+}
+
+.notification__title {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.notification__desc {
+  color: white;
+  opacity: 0.8;
+}
+
+.notification__button {
+  white-space: nowrap;
+  text-decoration: none;
+  font-weight: 400;
+  color: #262040;
+  background: #fff;
+  border-radius: 0.25rem;
+  padding: 10px 15px;
+  border: 0;
+  transition: all 0.2s;
+}
+
+.notification__button:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.menu {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__list__title {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  color: #000000;
+  padding: 0 15px;
+}
+
+.menu__list__item {
+  list-style: none;
+  text-align: center;
+  border-radius: 5px;
+  width: 100%;
+  transition: all linear 0.15s;
+}
+
+.menu__list__item:hover {
+  background: rgb(226, 224, 224);
+}
+
+.menu__list__item > a {
+  text-decoration: none;
+  text-align: left;
+  font-weight: 300;
+  color: #000000;
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.semester {
+  width: 50%;
+  padding: 0 3rem; /* Updated padding to symmetrical */
+}
+
+.semester_course {
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.semester_year {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+main {
+  margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+  }
+
+  .notification__desc {
+    word-wrap: break-word;
+  }
+
+  .semester_course {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+      </style>
+ <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet"> <!-- Importing Manrope font -->
+  </head>
+  <body>
+    <div id="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+
+    
+
+    <!-- main section -->
+
+    <main>
+      <!-- ECE 1109,1110 -->
+
+    <div class="card" id="ece_1109" style="margin-top: 0px;">
+      <div class="notification">
+        <div>
+          <h2 class="notification__title">ECE 1109,1110</h2>
+          <p class="notification__desc">
+            Introduction to Electronics and Communication
+            Engineering(Credit:3),Laboratory(Credit 1.5)
+          </p>
+        </div>
+        <div></div>
+      </div>
+      <div class="menu">
+    <div class="menu__list">
+      <h2 class="menu__list__title">Question Bank</h2>
+      <li class="menu__list__item">
+        <a
+          href="https://drive.google.com/file/d/1c9OX-eYeKdDTAZBD91HVpQBFswZg9ib3/view?usp=drive_link"
+          >Class tests</a
+        >
+      </li>
+      <li class="menu__list__item">
+        <a
+          href="https://drive.google.com/file/d/1ZHUVRyjOM0qxBlbelSUPxobgSYSxlI2_/view?usp=sharing"
+          >Term final 2021</a
+        >
+      </li>
+      <li class="menu__list__item">
+        <a
+          href="https://drive.google.com/file/d/1wOYh17NtJVEATQryYxzcxm4UhdXVHdg_/view?usp=drive_link"
+          >Term final 2019</a
+        >
+      </li>
+      <li class="menu__list__item">
+        <a
+          href="https://drive.google.com/file/d/1adl_hLcWpLTLlZo3SQ4k_Y7xWIebJb6N/view?usp=drive_link"
+          >Term final 2018</a
+        >
+      </li>
+      <li class="menu__list__item">
+        <a
+          href="https://drive.google.com/file/d/1lPdJ7zW_BTcx7ZhH_YIG-DvQkNtHJRVU/view?usp=drive_link"
+          >Term Final 2017</a
+        >
+      </li>
+      <li class="menu__list__item">
+        <a
+          href="https://drive.google.com/file/d/1_2Bt9f_MMaXsGaji7haovjUUh2nvFZmD/view?usp=drive_link"
+          >Term Final 2016</a
+        >
+      </li>
+      <li class="menu__list__item">
+        <a
+          href="https://drive.google.com/file/d/1ZuAqUd4Q0112pBG5J5Ilpdsf7GDacK_P/view?usp=drive_link"
+          >Term Final 2015</a
+        >
+      </li>
+    </div>
+        <div class="menu__list">
+          <h2 class="menu__list__title">Lab Manuals</h2>
+          <li class="menu__list__item">
+            <a
+              href="https://drive.google.com/file/d/14wTv5L_j1n6v9QYTet3PuDh79NWEqShU/view"
+              >Familiarization with the various <br/> electronic components, equipment<br/> and measuring instruments.</a
+            >
+          </li>
+          <li class="menu__list__item">
+            <a
+              href="https://drive.google.com/file/d/15-aMj4ZeDXzXLXmo335B6Z3sYzuckrqw/view"
+              >Study of transient response of<br/> RC circuits</a
+            >
+          </li>
+          <li class="menu__list__item">
+            <a
+              href="https://drive.google.com/file/d/152HGzMkuvkYwRT1NWY8xutrP45s1ZbpA/view"
+              >Experimental Investigation of <br/>Diode Characteristics and </br> Half Wave Rectification </a
+            >
+          </li>
+          <li class="menu__list__item">
+            <a
+              href="https://drive.google.com/file/d/15AusnLmN5ttkvIk1N8QZ6wjv2nDRkTkf/view"
+              >Study of the center tapped<br/> and bridge full wave rectifier</a
+            >
+          </li>
+          <li class="menu__list__item">
+           <a
+              href="https://drive.google.com/file/d/15OZcxLa1Fze7538E8hrqFFY1GEbAnTME/view"
+              >Voltage Regulation Using <br/>Zener Diode & Voltage regulator IC</a
+            >
+          </li>
+          <li class="menu__list__item">
+           <a
+              href="https://drive.google.com/file/d/15P3_HdO6YP2MvUfh9bIuoef13ul-Lrma/view"
+              >Experimental Demonstration of</br> the DC Characteristics of the BJT</a
+            > 
+          </li>
+          <li class="menu__list__item">
+            <a
+              href="https://drive.google.com/file/d/15RHzWHJ8eN5ZM6rfj10oG9on8cty3cwA/view"
+              >Experimental Demonstration <br/>Of the Characteristics of JFET</a
+            > 
+          </li>
+          <li class="menu__list__item">
+           <a
+             href="https://drive.google.com/file/d/15UD5-BmRE98UWQu6brMfCM9oiQY9uhvV/view"
+              >Verification of Truth <br/>Table of Different Logic<br/> Gates of TTL ICs</a
+            >
+          </li>
+        </div>
+        <div class="menu__list">
+          <h2 class="menu__list__title">Books</h2>
+          <li class="menu__list__item">
+            <a
+              href="https://drive.google.com/file/d/1aLD50M-Mgnr9LpSE7opPBJx3Z3DYfuR9/view"
+              >VK Mehta</a
+            >
+          </li>
+          <li class="menu__list__item">
+            <a
+              href="https://drive.google.com/file/d/1DH2hz0tVkLKaeLFOK3dI4Q-f7_awanFR/view"
+              >Boylestad 7th Edition</a
+            >
+          </li>
+          <li class="menu__list__item">
+            <a
+              href="https://drive.google.com/file/d/1P-Up02dr6vfGER84lG1KGSOfegFJyJnw/view"
+              >David A Bell</a
+            >
+          </li>
+          <li class="menu__list__item">
+            <a
+              href="https://drive.google.com/file/d/1LF3vLGU0OLzTRD12qeRKP4qn1ldtZdk_/view"
+              >Millman & Halkias</a
+            >
+          </li>
+          <li class="menu__list__item">
+            <a
+              href="https://drive.google.com/file/d/1HB5ccfGq5PtWlsHY1X7upbggwZn2nvhp/view"
+              >Simon Haykin, Michael Moher</a
+            >
+          </li>
+          <li class="menu__list__item">
+            <a
+              href="https://drive.google.com/file/d/1FYZHo2jGV316yhtugOmoLgdlurLAKLZZ/view"
+              >Boylestad 11th Edition</a
+            >
+          </li>
+          <li class="menu__list__item">
+            <a
+              href="https://drive.google.com/file/d/1sOYzI0GGPt_Mlbw2OzjjwNPWlqUL0_wK/view"
+              >Boylestad Solution 10th Edition</a
+            >
+          </li>
+          <li class="menu__list__item">
+            <a
+              href="https://drive.google.com/file/d/1vB9MvtN3nKr1m2L3TjZiYJXizi-MejL5/view"
+              >B. P. Lathi, Zhi Ding</a
+            >
+          </li>
+          <li class="menu__list__item">
+            <a
+              href="https://drive.google.com/file/d/1es3xejUS6oahi9wkK_KSnXnlX_M6Qma0/view"
+              >B. L. Theraja</a
+            >
+          </li>
+        </div>
+        <div class="menu__list">
+          <h2 class="menu__list__title">Notes</h2>
+          <li class="menu__list__item">
+            <a
+              href="https://drive.google.com/file/d/1-Fe-qg8t3I3-PnX7tZFGxJ_KK_BNgOdE/view"
+              >Tisha(2k21)</a
+            >
+          </li>
+          <li class="menu__list__item">
+            <a
+              href="https://drive.google.com/file/d/1b_OtViYj_yXR_HhvKI3f28CxZrEz24jq/view"
+              >Debraj(2k21)</a
+            >
+          </li>
+        </div>
+        <div class="menu__list">
+          <h2 class="menu__list__title">Slides</h2>
+          <li class="menu__list__item">
+            <a
+              href="https://drive.google.com/file/d/1OCGW4faaMrNay1EntWYJ2EPevrxyOito/view"
+              >Communication system</a
+            >
+          </li>
+          <li class="menu__list__item">
+            <a
+              href="https://drive.google.com/file/d/1c5HAVbxQyOAIQktUmrMgSBj8FU9gIKbX/view"
+              >Bandwidth</a
+            >
+          </li>
+          <li class="menu__list__item">
+            <a
+              href="https://drive.google.com/file/d/14Y4KseUz8EdVcbASg5Uq14UG-dbu6EBu/view"
+              >JFET</a
+            >
+          </li>
+        </div>
+      </div>
+    </div>
+
+    <!-- EEE 1109,1110 -->
+
+    <div class="card" id="eee_1109">
+      <div class="notification">
+          <div>
+              <h2 class="notification__title">EEE 1109,1110</h2>
+              <p class="notification__desc">Basic Electrical Engineering(Credit:3),Laboratory(Credit 1.5)</p>
+          </div>
+          <div>
+          </div>
+      </div>
+      <div class="menu">
+          <div class="menu__list">
+              <h2 class="menu__list__title">Question Bank</h2>
+              <li class="menu__list__item"><a href="link">Class tests</a>
+              </li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1iSE1gqS9Ab_vh5HA4FS71Y9x11PWujG7/view?usp=drive_link">Term final 2022</a> 
+              </li>
+              <li class="menu__list__item"><a href="Link">Term final 2021</a></li>
+              <li class="menu__list__item"><a href="link">Term final 2020</a>
+              </li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1ZDiM9g-su3I6e2vA7qxlTOihzURRQnb8/view?usp=sharing">Term final 
+              2019</a>
+              </li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1Ch901_NzPEg20v8ChVz4-cx8UPoZHJ6M/view?usp=drive_link">Term 
+              final 
+              2018</a>
+              </li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1nKGmueTmicNBHzyLgS-94DQlSQtctUwf/view?usp=drive_link">Term 
+              final 2017</a>
+              </li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1mG3jSvQDJKAZCY9_PJufrvA4lDQ73xJr/view?usp=drive_link">Term 
+              final 2016</a>
+              </li>
+              <li class="menu__list__item"><a href="link">Term final 2015</a>
+              </li>
+          </div>
+          <div class="menu__list">
+  <h2 class="menu__list__title">Lab Manuals</h2>
+  <li class="menu__list__item"><a href="https://drive.google.com/file/d/1K5IC23YvfxZKnCz2tkxmYF1Zhtyq6efE/view">Introduction</a></li>
+  <li class="menu__list__item"><a href="https://drive.google.com/file/d/1A8Kzkgs6P7hYa4VKRaEOfhbI6HpBBHfv/view?usp=drive_link">Familiarization with <br/> Electrical Elements</a></li>
+  <li class="menu__list__item"><a href="https://drive.google.com/file/d/13xCxuUDxqIA4GkFeqJRdKMceIMEe9Ho_/view?usp=drive_link">DC Circuits and KVL</a></li>
+  <li class="menu__list__item"><a href="https://drive.google.com/file/d/1MX-4n2sKpOmy6CezkMEbCQoPy1oFt1D-/view?usp=drive_link">Superposition Theorem</a></li>
+  <li class="menu__list__item"><a href="https://drive.google.com/file/d/1rT6xq3SqlQQLdoBskwSBsCPk5563ouqb/view?usp=drive_link">Reciprocity Theorem</a></li>
+  <li class="menu__list__item"><a href="https://drive.google.com/file/d/1gPM-8AaQwUl01xr3RFLREprLTOpvi3Na/view?usp=drive_link">Series and parallel RL circuit<br/> & phasor diagram</a></li>
+  <li class="menu__list__item"><a href="https://drive.google.com/file/d/16AaZvNR3fjSLrJ_Zpi8OlnVF6AS_29Qt/view?usp=drive_link">Study of Three Phase Circuit</a></li>
+</div>
+          <div class="menu__list">
+              <h2 class="menu__list__title">Books</h2>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1PnsaeMjsY8jAqYeBVbcTY61-9n4AFgVP/view">Alexander & Sadiku</a></li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/17EFWQRLJvKuh17MaYzf5ioSAmEw623NJ/view">Alexander & Sadiku Solution</a></li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1zmTS2v-3VTr3c4knyBdfNn3nWGoYpIFX/view">Russel & George</a></li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/13-PR4FtVF5hBdrqVPNTX9T7AaVjgXtm9/view">Kerchnel & Corcoran Solution</a></li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1WZ-PLHosu0EqR-5OkZFl0MqLQwcdeZrt/view">Boylestad</a></li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1vqghiwq1SxRFLHWLSWdyEdTrPeYPx0eI/view">A. Sudhakar</a></li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1-BUiyT3rgCVq6q5crdRbOcdltk0UNqkI/view">Bakshi</a></li>
+          </div>
+        <div class="menu__list">
+              <h2 class="menu__list__title">Notes</h2>
+              <li class="menu__list__item"><a href="https://drive.google.com/drive/folders/1GWLwww9-s8aXRZPnhsUga4V0VuhbNW6r">AC Circuits QB Solve</a>
+              </li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1aIssuRiTnDhYP-_wDYIqQtoW7G4MKwMq/view">DC Circuits</a>
+              </li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1sJZUMIqXBcPtqK-WRX3Uy9Uy6gqeX1pY/view">DC Circuits QB Solve</a>
+              </li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1iCNwrgtvOYXaoZkpSNaWvv52uzVgywSx/view">AC Solve</a>
+              </li>
+
+          </div>
+          <div class="menu__list">
+              <h2 class="menu__list__title">Slides</h2>
+              <li class="menu__list__item"><a href="link">Slide name</a></li>
+          </div>
+      </div>
+    </div>
+
+  <!-- Ph 1109,1110 -->
+
+  <div class="card" id="ph_1109">
+    <div class="notification">
+        <div>
+            <h2 class="notification__title">Ph 1109,1110</h2>
+            <p class="notification__desc">Physics(Credit:3),Laboratory(Credit 1.5)</p>
+        </div>
+        <div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="menu__list">
+            <h2 class="menu__list__title">Question Bank</h2>
+            <li class="menu__list__item"><a href="link">Class tests</a></li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/11wBUm1ES5OMWwuJltUAF2MV7vV4SiI9a/view?usp=drive_link">Term final 2022</a></li>
+            <li class="menu__list__item"><a href="link">Term final 2021</a></li>
+            <li class="menu__list__item"><a href="link">Term final 2020</a></li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1u6QXnJacEd1tNKU_g7N23-_iQa9L93DJ/view?usp=drive_link">Term final 2019</a></li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1HdNhWjSJOnYkx0gq-schiZ2fxIJlNYyi/view?usp=drive_link">Term final 2018</a></li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1gcUz99uKUlOgg5BM-fBqlRPzhCBvpuyS/view?usp=drive_link">Term final 2017</a></li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1TzuID9BsbbyXzIgJH1tVpms6h3edzVji/view?usp=drive_link">Term final 2016</a></li>
+            <li class="menu__list__item"><a href="link">Term final 2015</a></li>
+        </div>
+        <div class="menu__list">
+            <h2 class="menu__list__title">Lab Manuals</h2>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1vKxjB0maG7GKMszFuuBAnMv7jiYG7jgg/view">Physics sessional book</a></li>
+             <li class="menu__list__item"><a href="https://drive.google.com/file/d/1BxAHpA6xzYqEAdtmg_nlfqF-XfzkWvSI/view"> Practical physics for degree students </a></li>
+        </div>
+        <div class="menu__list">
+            <h2 class="menu__list__title">Books</h2>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1n-tTK7VA10OPOgrC3i7x1JFhDT6s6TCZ/view">Paul A. Tipler & Ralph A. Llewellyn</a></li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1th78-tLkJgfSTtYxkVTBga7hKC_YCMXQ/view">Peter J. Nolan</a></li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/10kFUbMolKKT-j63VBfQtzDudm_JX6w35/view">Serway / Moses / Moyer</a></li>
+            <li class="menu__list__item"><a href="https://emineter.wordpress.com/wp-content/uploads/2020/04/hecht-optics-5ed.pdf">Eugene Hecht</a></li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1dlEKYgJ8DxduEhEWxScVdsNxQuhAhRLb/view">N. Subrahmanyam, Brij Lal</a></li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/19EYjWN81rBtwkFoVTrVH5xqKMQxybwcX/view">Resnick Halliday</a></li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1_wIbv1fwOrtjiOOKWKE55vet1b5x0kKW/view">Francis A. Jenkins, Harvey E. White</a></li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1hpSJ8FPwIRdmqtGWXAzxCfdF5SJtqS9t/view">Arthur Beiser 2nd Edition</a></li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1baiO4h6mwfVxPfDz58i3AH4QgHK2yDhn/view">Arthur Beiser 6th Edition</a></li>
+        </div>
+        <div class="menu__list">
+            <h2 class="menu__list__title">Notes</h2>
+            <li class="menu__list__item"><a href="link">Publisher's name(Batch)</a>
+            </li>
+
+        </div>
+<div class="menu__list">
+<h2 class="menu__list__title">Slides</h2>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1D0ENzc4CT-mA56Vmavfjvz7FhKoOalPw/view">Theories of Light</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1N594dNnTKJJu6z2RqdCQDRvisJtGPw03/view">Wave Band</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1oZtI13zi4OVbjsKguFKWzlkRgGR3ozpY/view">Quantum Theory of Light</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/19NUCuxjdTbAcg7BdLDf4v7Zph6QgIKPu/view">Quantum Theory of Light(Math Problems)</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1Q8eErrr4u4GY16sfKKWFVunN3D8ltlE8/view">Photoelectric Effect</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/14oLKWD7eG63MCFfVaIHdOEJDHtsRsA_1/view">Compton Effect</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/15wtREgkusn4kcSgs7MO9bGLSA_y_SNvF/view">Heisenber Uncertainty Principle</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1R7fQNC1E-hwQ8oOSZWlcnAqEjLD9xEJg/view">De Broglie</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1AlAe_Ih6K1Ig23hdk3RO8lZYiVdWtXg8/view">Assignment Photoelectric</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1Cfp03iQwvDzNsgqD-mn-AWvtcHsfUi5o/view">Atom Model(Bohr, Vector)</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1M6Lvv460BXVycR3rSpPKlgIz095TWbj2/view">Atom Model</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1Jx7pnrcZRL3ef99h7NZ08kA1UPrGJa9Q/view">Correspondence Principle</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1NKJo8Gc8aPRqIXAuLQTmuMMU-WtnAxrJ/view">Vector Atom Model</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1oI30qA2Zg2FlpyeWP_Fe6RLyLA24yPTI/view">Diffraction, Interference, Superposition</a></li>
+</div>
+    </div>
+  </div>
+
+    <!-- Math 1109 -->
+
+    <div class="card" id="math_1109">
+      <div class="notification">
+          <div>
+              <h2 class="notification__title">MATH 1109</h2>
+              <p class="notification__desc">Differential & Integral Calculus(Credit:3)</p>
+          </div>
+          <div>
+          </div>
+      </div>
+      <div class="menu">
+          <div class="menu__list">
+              <h2 class="menu__list__title">Question Bank</h2>
+              <li class="menu__list__item"><a href="link">Class tests</a>
+              </li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1QI4_l7HGbuIKaV3YkBjGkA_5YKsSdXZx/view?usp=drive_link">Term final 2022</a> 
+              </li>
+              <li class="menu__list__item"><a href="link">Term final 2021</a></li>
+              <li class="menu__list__item"><a href="link">Term final 2020</a></li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/18MUiNb9GvDYHQoLo2mlh4QI0CQQB8K97/view?usp=drive_link">Term final 2019</a> 
+              </li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1KnSO6xUwGTxv4kzpj5wd8N9xkXyJVfTb/view?usp=drive_link">Term final 2018</a> 
+              </li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1bqw5NzeOTCEJEZX83ZTD6euNRS7qTJT_/view?usp=drive_link">Term final 2017</a> 
+              </li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1MdNyH6AP2bHmdIH9ds4nv3umGnNrpRe9/view?usp=drive_link">Term final 2016</a> 
+              </li>
+              <li class="menu__list__item"><a href="link">Term final 2015</a></li>
+          </div>
+          
+          <div class="menu__list">
+              <h2 class="menu__list__title">Books</h2>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1dKbQb9FMteM4cVKsQy1XeWQpHWizo6wX/view">Joseph Edwards</a></li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1gVuYt0wdKaCYRrQCBFQ1O5xH0VzDeXJy/view">Anton Bivens Davis</a></li>
+          </div>
+          <div class="menu__list">
+              <h2 class="menu__list__title">Notes</h2>
+              <li class="menu__list__item"><a href="https://drive.google.com/drive/u/0/folders/1B8qB9WbtSHiQTB_tzhAWja1KtYIG58bA">Classnote by Maria (2k21)</a>
+</li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/10kAyOT1JDJ8_uOLxR0ILhW7VXV6okC_d/view">Integration by Sadik(2k21)</a>
+</li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1_uOMB9-vZ95l6O5jnXNoyhC66sxX5Opm/view">Differentiation by Sadik (2k21)</a>
+</li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/14rzAqxLbTRoXzquJB2QBQYC5EPaFFabA/view">Integration QB Lybah (2k21)</a>
+</li>
+
+          </div>
+          <div class="menu__list">
+              <h2 class="menu__list__title">Slides</h2>
+              <li class="menu__list__item"><a href="link">Slide name</a></li>
+          </div>
+      </div>
+    </div>
+
+    <!-- HUM 1109 -->
+
+    <div class="card" id="hum_1109">
+      <div class="notification">
+          <div>
+              <h2 class="notification__title">HUM 1109</h2>
+              <p class="notification__desc">Technical English(Credit:3)</p>
+          </div>
+          <div>
+          </div>
+      </div>
+      <div class="menu">
+          <div class="menu__list">
+              <h2 class="menu__list__title">Question Bank</h2>
+              <li class="menu__list__item"><a href="link">Class tests</a>
+              </li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1wf2h8lEK1qrBuViYw5gNGjFzs0BqKm8z/view?usp=drive_link">Term final 
+              2022</a></li>
+              <li class="menu__list__item"><a href="link">Term final 2021</a></li>
+              <li class="menu__list__item"><a href="link">Term final 2020</a></li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1V__Jh4A5ZDg3nssf5AwbLDGq141RaRs7/view?usp=drive_link">Term final 
+              2019</a></li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1fVSEeNB_E8ZFH0RuGiQolxWL43SmD-Ig/view?usp=drive_link">Term final 
+              2018</a></li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1KJWFw_G8ekeB0woQFVOqzTWC1BdfU8wf/view?usp=drive_link">Term final 
+              2017</a></li>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1OSi94nyDyhUo033sx5xc2tVJ83D-c_Ix/view?usp=drive_link">Term final 
+              2016</a></li>
+              <li class="menu__list__item"><a href="link">Term final 2015</a></li>
+          </div>
+        
+          <div class="menu__list">
+              <h2 class="menu__list__title">Books</h2>
+              <li class="menu__list__item"><a href="link">Writer's name</a></li>
+          </div>
+          <div class="menu__list">
+              <h2 class="menu__list__title">Notes</h2>
+              <li class="menu__list__item"><a href="https://drive.google.com/file/d/1TSklfF9Aruxd2Iw2Ocnh9KbrjMQwAom8/view">CV</a>
+              </li>
+
+          </div>
+          <div class="menu__list">
+              <h2 class="menu__list__title">Slides</h2>
+              <li class="menu__list__item"><a href="link">Slide name</a></li>
+          </div>
+      </div>
+  </div>
+
+  <!-- ECE 1205 -->
+
+  <div class="card" id="ece_1205">
+    <div class="notification">
+        <div>
+            <h2 class="notification__title">ECE 1205</h2>
+            <p class="notification__desc">Science of Engineering Materials(Credit: 3)</p>
+        </div>
+        <div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="menu__list">
+            <h2 class="menu__list__title">Question Bank</h2>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1JnGCu5q_OrPGxYp3b0EiSRFALYKZGNet/view">CT</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1taCeRHa3ZFfXAB906stEzHbNQ_UboV0j/view">Term final (2015-22)</a>
+            </li>
+        </div>
+        
+        <div class="menu__list">
+            <h2 class="menu__list__title">Books</h2>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1X95FmPbNkbFmUS2oLhp7m99lxmYslSvy/view">S.O Pillai</a></li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1MMMxpyShSyS3Q69w6GuT6RmeQAMb0ipQ/view">S. O. Kassap</a></li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1DMtB7c-FTvkWAMbl45W8hNqEPAnuCuGy/view">S. O. Kassap</a></li>
+        </div>
+        <div class="menu__list">
+            <h2 class="menu__list__title">Notes</h2>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1CAP0hlVNeaojx1Nxwt-5fLuxrxUuZ53y/view">Note From Senior</a>
+            </li>
+
+        </div>
+        <div class="menu__list">
+<h2 class="menu__list__title">Slides</h2>
+<li class="menu__list__item"><a href="https://docs.google.com/presentation/d/1yDrxenSM4z2hfTmy6oum3QWfqo5QbDMG/edit#slide=id.p1">Crystal Imperfections</a></li>
+<li class="menu__list__item"><a href="https://docs.google.com/presentation/d/1iQ1PNH6qKdChl6xpXJKWm5TjKKoOiPOa/edit#slide=id.p1">Thermal Conductivity <br> of solid</a></li>
+<li class="menu__list__item"><a href="https://docs.google.com/presentation/d/1pwH9XsHXSHWYcMpZifpqQVPs0kEWnaze/edit#slide=id.p1">Electrical conductivity <br> of solid</a></li>
+<li class="menu__list__item"><a href="https://docs.google.com/presentation/d/1ut1UhUUDEATiMOrMWHKBwOTOfl09TaWN/edit#slide=id.p1">Polarization</a></li>
+<li class="menu__list__item"><a href="https://docs.google.com/presentation/d/1DNz-a49um7pwH9T9_VtYnzNTwoh-e2XY/edit#slide=id.p1">Optical properties <br> of solid</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1UKVDy31cDbfhX0NY91exm_CXeMo8C0CQ/view">Introduction to SOEM</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1l3z-7EfAMPy7W1W_Weop40YY5UcB__fL/view">Semiconductor day 1</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/17jLpknjc0yakqzYrdHybVuaLagtfdzq8/view?usp=drive_link">Semiconductor 2</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1cEwqgA7v_kJqloJi4zhd6e_4VU_hZchf/view?usp=drive_link">Semiconductor 3</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1wwDYsY0LI-4SzkPRSVcbLCLFJDk_--Hi/view?usp=drive_link">Semiconductor 4</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1k1La0yLVLAe55QkVoPdeN_uJHqeLs46J/view?usp=drive_link">Semiconductor 5</a></li>
+<li class="menu__list__item"><a href="https://docs.google.com/presentation/d/1fzWP89ELXmXYFy7D3eQ-8pe1Na8yAbw1/edit#slide=id.p1">Semiconductor 6</a></li>
+<li class="menu__list__item"><a href="https://docs.google.com/presentation/d/1GfaZrjgAzGJDEDLhhjTaxocF5D2SphU2/edit?usp=drive_link&ouid=113345335364956139340&rtpof=true&sd=true">Magnetism 1</a></li>
+<li class="menu__list__item"><a href="https://docs.google.com/presentation/d/11mm4nGjZEVijD4wNcVCGO6W51NoFIue-/edit?usp=drive_link&ouid=113345335364956139340&rtpof=true&sd=true">Magnetism 2</a></li>
+<li class="menu__list__item"><a href="https://docs.google.com/presentation/d/1KTB9b78Kn7DnUW2rLjT2X0iSqEnD48Ts/edit?usp=drive_link&ouid=113345335364956139340&rtpof=true&sd=true">Magnetism 3</a></li>
+<li class="menu__list__item"><a href="https://docs.google.com/presentation/d/13LI2ctAUSUfYb3bYVPryeyMrpcx0ItYY/edit?usp=drive_link&ouid=113345335364956139340&rtpof=true&sd=true">Magnetism 4</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1fUwoVk17psZT_ZJhIrAe4G92_QHTK5WN/view?usp=drive_link">Superconductivity 1</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1oFq-lPTAKw802mHfMeWPk8DOexwj60nX/view">Superconductivity 2</a></li>
+</div>
+    </div>
+</div>
+
+  <!-- ECE 1209,1210 -->
+
+  <div class="card" id="ece_1209">
+    <div class="notification">
+        <div>
+            <h2 class="notification__title">ECE 1209,1210</h2>
+            <p class="notification__desc">Analog Electronics-1 (Credit:3),Laboratory(Credit 1.5)</p>
+        </div>
+        <div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="menu__list">
+            <h2 class="menu__list__title">Question Bank</h2>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1XvQcs3oKD6mJz45JC2uTQw1qdl_ddxGF/view">CT</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1pQ9l9bvwFzvTniZrVtqXLd3HYTrrxqLC/view?usp=drive_link">Term final 2021</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1BSdMH1j45rTwKoyD6vF_IXXeqiTEdpNr/view?usp=drive_link">Term final 2020</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1DXSOfonI31llNd55VhmY2KE-In6M-AEI/view?usp=drive_link">Term final 2019</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1_bBta63S-w2st1Wdfo46JldllrXitG7q/view?usp=drive_link">Term final 2018</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/16wnD7vgEr88qfztz8reIUo7cBqbYiLvW/view?usp=drive_link">Term final 2017</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1jDVZwWmUbQS15Zlh6HxOCuVrPnTJLAlR/view?usp=drive_link">Term final 2016</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1ab-cjANiS4b0itJlbVgc_sQx5Kt3Hj_l/view?usp=drive_link">Term final 2015</a>
+            </li>
+        </div>
+        <div class="menu__list">
+            <h2 class="menu__list__title">Lab Manuals</h2>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1tNkYwBiK3Xr9O_6ryv2pOuyzgkziFCJH/view">Lab 1 to 4</a></li>
+            <li class="menu__list__item"><a 
+href="https://drive.google.com/file/d/1PO8WdqmfyndRG3wRSYm_fDb5cbDUx852/view">Darlington pair circuit</a></li>
+            <li class="menu__list__item"><a
+href="https://drive.google.com/file/d/1vV1Um_gSPP-cNGbQJejdhlsG7sFIjEbc/view">Complementary power amplifier</a></li>
+            <li class="menu__list__item"><a 
+href="https://drive.google.com/file/d/1fOqH0n10L2SxtdhbVpu6jH8Oam5GBYEN/view">MOSFET voltage amplifier</a></li>
+        </div>
+        <div class="menu__list">
+            <h2 class="menu__list__title">Books</h2>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1Zgvf39dx6I6G3H9OKhIrtpl9iagM9cYe/view">Robert L Boylestad</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1sOYzI0GGPt_Mlbw2OzjjwNPWlqUL0_wK/view">Robert L Boylestad(Solution)</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1V5QsCYMtVdkoaVqIIrfgw1LKNAFTf_Rv/view">V.K Mehta</a></li>
+
+        </div>
+        <div class="menu__list">
+            <h2 class="menu__list__title">Notes</h2>
+         <li class="menu__list__item"><a href="https://drive.google.com/file/d/198WcHmBilorb-MAEpiGSRvHnkZmVIqoP/view">DC Biasing</a>
+</li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/13spADeHlqGCiGExHFRnjBWQZq_UW4NR4/view">BJT</a>
+</li>
+
+        </div>
+        <div class="menu__list">
+<h2 class="menu__list__title">Slides</h2>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1gY_zsrIDuHRB_Oug1A-OO_EWBXhC2c-7/view">Field Effect <br> Transistors</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1k2a8DdRx9bZf7Pk7fAgWrnfhWcfyot9o/view">FET biasing</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1p5E2Kpq3uzsi012Z4moIJGlaYr1eCvQ3/view">FET Amplifiers</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/19JfFZ-9WiV4aVjGXYUhBcqlI1AN0YFzW/view">BJT and FET <br> Frequency Response</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1mFPBROIW56pGw440UPoy2Ix-4HiE7vA2/view">Clippers and Clampers</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1D5-HQAISgt6xf6C4sMFV6dzTF2WxzNuH/view">MOSFETs</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1TdUUSsjK3PXChUYWpdLK-KAMnb2UnyLT/view">MOSFET biasing</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1QKgON-QOucr52XD69anmbb_TCICPHWS3/view">CMOS</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1LaSE8Sjkh234WU12SuriQ44Rh1e5AZv-/view">Display Technology</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1Q0kUj59mA9LP-Hv_35qEpGQ1rTQkEkz4/view">Display Technology <br> Part 2</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1i5wTGf2uaKLyj5hD-38JignqyeZ2Vm5I/view">Electrostatic CRT tube</a></li>
+</div>
+    </div>
+</div>
+
+  <!-- CSE 1209,1210 -->
+
+  <div class="card" id="cse_1209">
+    <div class="notification">
+        <div>
+            <h2 class="notification__title">CSE 1209,1210</h2>
+            <p class="notification__desc">Computer Fundamentals and C programming(Credit:3,1.5)</p>
+        </div>
+        <div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="menu__list">
+            <h2 class="menu__list__title">Question Bank</h2>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1qTY9yFalYthtoQqCDq8OYY-qIbGD3-X8/view">CT</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1UMOloP4lItp_8yv0bQYf4m5JpZgJ6t6Y/view">Term final 2021</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1XLHkoLqzzvy0tMdIeOXMLjJYGafHLlW4/view?usp=drive_link">Term final 2020</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1ekWutUgy64wkdXCEcLbYcwDmVmezyOiY/view?usp=drive_link">Term final 2019</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1EFux4YvGZG5J_EsOr5ai8Cqp0kabE1E6/view?usp=drive_link">Term final 2018</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1swHq6JdZcoNdb89_509Eeh0eZb94P79m/view?usp=drive_link">Term final 2017</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1waXwuyGw7b4Ms6O9dpw_3rrX7e-cGqBn/view?usp=drive_link">Term final 2016</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1FZjueMKG2tThKt8XMmYW8cFOZbsy0pjC/view?usp=drive_link">Term final 2015</a>
+            </li>
+
+        </div>
+        <div class="menu__list">
+            <h2 class="menu__list__title">Lab Manuals</h2>
+            <li class="menu__list__item"><a href="https://drive.google.com/drive/folders/1dnioyChTXbFGntohvzoVtKGl8v82nrxU?usp=drive_link">Input output <br> operations</a></li>
+        </div>
+        <div class="menu__list">
+<h2 class="menu__list__title">Books</h2>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1iXfbe9d2kgwU3hrBvDJLBK-W_hmba84M/view">Kanetkar</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1Etm9lZpAVxVmPO0-t7wvfwxoIYsONGKp/view">E.Balagurusamy</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1EDz5EGttMqA0aLl8miYCDql3SAQPzAho/view">Sisir Kumar Jena</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1I2wfW1X4EWFyDrQpXIx1z-oFM99lEdWS/view">Steve Oualline</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1U5Zdy7HZtE5RI-TDh2zwgeM1ohzpda5v/view">Ansi C Solution
+</a></li>
+
+</div>
+<div class="menu__list">
+<h2 class="menu__list__title">Notes</h2>
+
+    <li class="menu__list__item"><a href="https://drive.google.com/file/d/1ZbhKIMon3vsWYj9X3YkHP8-Hyayqc9C9/view">Sadik(2k21)</a>
+    </li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/11hwCwSTQwLxbk4ttfvf1MobSXwnWEtfm/view">Jerith(2k21)</a>
+</li>
+</div>
+        <div style="word-wrap: break-word;" class="menu__list">
+            <h2 class="menu__list__title">Slides</h2>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1rx8IWlub3k6vZygBhV-HUdB4FI8Tx1mP/view">Constants, Variables and <br> Data
+                Types</a></li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1v9yNUdKfR1sTPWZRACh5SU88EL-TcsPY/view">Looping</a></li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1z6avfY3l6_y31dbqWiYr9-CZLQVFGsUY/view">Arrays</a></li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1QFo4qz0mOKfFB9R0knwkXQ0AMfuJPac8/view">Functions</a></li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1mWNafePRH2qBbysWYcCw2narUWPvj5Bp/view">File Handling in C</a></li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/190gpCejDrI9Lz7IuQNrRWYsWgaovzffg/view">Computer Fundamentals</a></li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1U24CPHE9c1YczNTvBGkvrkKJWaCqsg6J/view?usp=drive_link">Algorithm & Flowchart</a></li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/14jfZWXan_Qs1dEQFt97Ehwq-h0ZdsIzR/view?usp=drive_link">Introduction to  Information <br> Systems</a></li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1xVHIKZjC6Y559jTuZ5GYfItcVKdDjfHN/view?usp=drive_link">Computer Architecture:  Basic <br> Organization and Functional Units</a></li>
+        </div>
+    </div>
+</div>
+
+  <!-- Chemistry 1209,1210 -->
+
+  <div class="card" id="chemistry_1209">
+    <div class="notification">
+        <div>
+            <h2 class="notification__title">CHEMISTRY 1209,1210</h2>
+            <p class="notification__desc">Chemistry(Credit:3),Laboratory(Credit 0.75)</p>
+        </div>
+        <div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="menu__list">
+            <h2 class="menu__list__title">Question Bank</h2>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1GVD3pf5qWgWZ_M9EW0U8LQgIzHlBIqW0/view">CT</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1A-R4aGjnpTAsxFtrWdZVq8s9XC92yL9v/view?usp=drive_link">Term final 2021</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/19Sayl-ORWdrUbIfSiI1OVFolArtGs4Jl/view?usp=drive_link">Term final 2020</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1dSmJ8w9BiKu9OKwhGHgcpUG3JUQu0sXL/view?usp=drive_link">Term final 2019</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1XNjYA1z59alIDaTQwcg4cegA8OHagNJB/view?usp=drive_link">Term final 2018</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1WOgIuPTG983RJaxt5gyJkiot5df7868r/view?usp=drive_link">Term final 2017</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1WsSAUjiROvIJ21SgZdorm4FSCC7P4Awg/view?usp=drive_link">Term final 2016</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1XEJrpoTMMJ5j6XSl_9g5DAuPqRWPhfmb/view?usp=drive_link">Term final 2015</a>
+            </li>
+        </div>
+        <div class="menu__list">
+            <h2 class="menu__list__title">Lab Manuals</h2>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1GcDObbh9TBx3NXQFf0D9JLEdGkEUTkfO/view">Experiment 1 to 5</a></li>
+        </div>
+        <div class="menu__list">
+            <h2 class="menu__list__title">Books</h2>
+            <li class="menu__list__item"><a href="link">Writer's name</a></li>
+        </div>
+        <div class="menu__list">
+<h2 class="menu__list__title">Notes</h2>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1kIK8a26YyQp4y6g28pgXhecqqHoDnF_E/view?usp=drive_link">Musa Sir note part 1 (Debraj Rohan)</a>
+</li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/12DB3ZnqyOxpXrgVvnetDVJXxHnKX-yCn/view">For combined CT (Debraj Rohan)</a>
+</li>
+<li class="menu__list__item"><a href="https://drive.google.com/drive/folders/10g80b5bYRaXMFK66Vfq256sG3bYjVxoN">Qb solve Motin Sir (Debraj Rohan)</a>
+</li>
+
+</div>
+        <div class="menu__list">
+<h2 class="menu__list__title">Slides</h2>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1CM5QTgRUZqV6-rVfZizrftSrYbQvJky4/view">VSEPR,MOT,VBT</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1ypmhN5LPfgNsDedCymPXIz6aPrxtOHOw/view">Metalic Bond,<br>H-bond</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1P57sA-GmCAOYCRnzvPoqg90KtQ_HHdA5/view?usp=drive_link">Complex ions and <br> coordination compounds</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1Is-MqctOwfiCKoY3PF_QqHpLWo-yFbq7/view?usp=drive_link">Free radical reaction</a></li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1PQ_yIqNl8tzw7zeGQzME3vm_8WAQwKZr/view?usp=drive_link">Close packing sheet</a></li>
+</div>
+    </div>
+</div>
+
+  <!-- Math 1209 -->
+
+  <div class="card" id="math_1209">
+    <div class="notification">
+        <div>
+            <h2 class="notification__title">MATH 1209</h2>
+            <p class="notification__desc">Coordinate Geometry & Differential Equations(Credit:3)</p>
+        </div>
+        <div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="menu__list">
+            <h2 class="menu__list__title">Question Bank</h2>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1SnYlsnBn55Kfz2CPMoEwsbduqqvVK_WW/view">CT</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1dJyyvHBlusVZNYaKi-r-mO-mlu9FPugK/view?usp=drive_link">Term final 2021</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1xtSoNQZ9q9YQT8kErFBJvzlUNWJf7QsN/view?usp=drive_link">Term final 2020</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1cO1BpCOb1leSJmf9-TDETdBUsjqLK26s/view?usp=drive_link">Term final 2019</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1gRw828t2o4pvmnKSHXK4VRHecGWF9wUO/view?usp=drive_link">Term final 2018</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1rl_URGyzNUke0w8IEw0fxvg76o-xpClE/view?usp=drive_link">Term final 2017</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1d0g7oDDKk8R50dAHRBGtUQo3qk2wz8Si/view?usp=drive_link">Term final 2016</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1gVOd_5zMhcyUFzIJ61xciVHbesxWemqi/view?usp=drive_link">Term final 2015</a>
+            </li>
+        </div>
+        
+        <div class="menu__list">
+            <h2 class="menu__list__title">Books</h2>
+            <li class="menu__list__item"><a href="link">Writer's name</a></li>
+        </div>
+        <div class="menu__list">
+            <h2 class="menu__list__title">Notes</h2>
+         <li class="menu__list__item"><a href="https://drive.google.com/file/d/1fOpazKPqWCVL3zpCySMXyMJAYuEFCO67/view">Geometry (Yousha)</a>
+</li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1xJCmPbOThCkrZIh5FJrQ05ri58F5IJe4/view">2D part (Lybah)</a>
+</li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1r5fGL3EP3foXMPuv7-gp8C0U3zKJbr0m/view?usp=drive_link">Plane, Straightline, Sphere (Lybah)</a>
+</li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1zg0ik_A6pJmPnyNGesKrOKXQIF5RYSlz/view">3D Geometry (Marufatul)</a>
+</li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1Pptn8X7dg2Mg8jx2nDuWl_K4wLnOTgt-/view">Differential Equation 1st Order - 1 (Faysal)</a>
+</li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1G7sDv15AVPp34sZZKpTVqdPfRVBTJ0wI/view">Differential Equation 1st Order - 2 (Faysal)</a>
+</li>
+<li class="menu__list__item"><a href="https://drive.google.com/file/d/1oMOh006xZ2969uz580x3QVgBGi8QRW_S/view?usp=drive_link">Differential Equation 2nd Order (Lybah)</a>
+</li>
+
+        </div>
+        <div class="menu__list">
+            <h2 class="menu__list__title">Slides</h2>
+            <li class="menu__list__item"><a href="link">Slide name</a></li>
+        </div>
+    </div>
+</div>
+
+  <!-- HUM 1210 -->
+
+  <div class="card" id="hum_1210">
+    <div class="notification">
+        <div>
+            <h2 class="notification__title">HUM 1210</h2>
+            <p class="notification__desc">Technical English Laboratory(Credit 0.75)</p>
+        </div>
+        <div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="menu__list">
+            <h2 class="menu__list__title">Question Bank</h2>
+            <li class="menu__list__item"><a href="">CT</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1V6X9TuC_ySGTfvyeeaQ341X8FiWsYCMU/view?usp=drive_link">Term final 2021</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/17gDLhkLW5N8I1iD4dOfx95BRFqy93Xh6/view?usp=drive_link">Term final 2020</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1rah9IBY0WcJqUKgRw9CzfM_uQgxJr6-K/view?usp=drive_link">Term final 2019</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1SDW4ZvUQVdFf13fsPkCpCvIU_ytP2jhf/view?usp=drive_link">Term final 2018</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/156a7mG95nNV7YKLOXSCUWw1ShsDKwqRd/view?usp=drive_link">Term final 2017</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1Z9Rhsa1qFtXXMYfNZvS5TkrEn4jjXPPJ/view?usp=drive_link">Term final 2016</a>
+            </li>
+            <li class="menu__list__item"><a href="https://drive.google.com/file/d/1Bm0jkSXeNfm6i0AjdjpU-2NFBUOW8e-V/view?usp=drive_link">Term final 2015</a>
+            </li>
+        </div>
+        <div class="menu__list">
+            <h2 class="menu__list__title">Lab Manuals</h2>
+            <li class="menu__list__item"><a href="link">Manual name</a></li>
+        </div>
+        <div class="menu__list">
+            <h2 class="menu__list__title">Books</h2>
+            <li class="menu__list__item"><a href="link">Writer's name</a></li>
+        </div>
+        <div class="menu__list">
+            <h2 class="menu__list__title">Notes</h2>
+            <li class="menu__list__item"><a href="link">Publisher's name(Batch)</a>
+            </li>
+
+        </div>
+        <div class="menu__list">
+            <h2 class="menu__list__title">Slides</h2>
+            <li class="menu__list__item"><a href="link">Slide name</a></li>
+        </div>
+    </div>
+</div>
+
+    </main>
+    
+    <script>
+      // Function to show progress bar for 1 second
+      function showProgressBar(callback) {
+        // Show progress bar
+        document.getElementById("progress-bar").style.display = "block";
+
+        // Hide progress bar after 1 second
+        setTimeout(function () {
+          document.getElementById("progress-bar").style.display = "none";
+          if (callback) {
+            callback(); // Execute callback function
+          }
+        }, 1000);
+      }
+
+      window.addEventListener("load", function () {
+        showProgressBar(); // Show progress bar on page load
+      });
+
+
+      document.addEventListener('DOMContentLoaded', function () {
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+  
+            const target = document.querySelector(this.getAttribute('href'));
+  
+            if (target) {
+              window.scrollTo({
+                top: target.offsetTop,
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+      });
+    </script>
+    
+  </body>
+</html>

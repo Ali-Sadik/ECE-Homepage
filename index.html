@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/ico" href="favicon.ico">
+  <title>StudyMaterials</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+  <link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet"> <!-- Importing Manrope font -->
+</head>
+<body>
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand" href="index.html"><img src="log.png" alt="StudyMaterials Logo" style="height: 40px;"></a>
+      <!-- Burger menu button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="1styear.html" target="_blank" id="1st">1st year</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" target="_blank" id="2nd">2nd year</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">3rd year</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">4th year</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://teamsiliconx.github.io/aboutus/">About us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <section class="banner">
+    <div class="container">
+      <div class="banner-text">
+        <h1 style="user-select: none;">Hello there!</h1>
+        <p style="user-select: none;"><strong>Welcome to the StudyMaterials</strong></br>Contribute your valuable resources</p>
+        <a href="http://192.168.0.102:3010" target="_blank"><button id="contri">Contribute now</button></a>
+      </div>
+    </div>
+    <img class="banner-image" src="home.png" alt="monitoring">
+  </section>
+
+  <div class="container">
+    <div class="row">
+      <div class="mb-30 col-md-6 col-lg-4">
+        <div class="card">
+          <img class="card-icon" src="faculty.png" alt="faculty">
+          <h3 class="card-title">Faculty Members</h3>
+          <p class="card-text">Visit the student corner to get your necessary course resources from your course teacher</p>
+          <a class="card-link" href="http://192.168.0.102:3011" target="_blank" id="faculty">Visit now</a>
+        </div>
+      </div>
+      <div class="mb-30 col-md-6 col-lg-4">
+        <div class="card">
+          <img class="card-icon" src="notes.jpg" alt="notes">
+          <h3 class="card-title">Notes</h3>
+          <p class="card-text">Handwritten notes from the students</p>
+          <a class="card-link" href="https://ali-sadik.github.io/StudyMaterialsKUETECE/notes/notes.html" id="notes">Visit now</a>
+        </div>
+      </div>
+      <div class="mb-30 col-md-6 col-lg-4">
+        <div class="card">
+          <img class="card-icon" src="books.jpg" alt="books">
+          <h3 class="card-title">Books</h3>
+          <p class="card-text">Download your necessary reference books from here</p>
+          <a class="card-link" href="https://ali-sadik.github.io/StudyMaterialsKUETECE/books/books.html" id="books">Download now</a>
+        </div>
+      </div>
+      <div class="mb-30 col-md-6 col-lg-4">
+        <div class="card">
+          <img class="card-icon" src="lab.jpg" alt="lab manuals">
+          <h3 class="card-title">Lab manuals</h3>
+          <p class="card-text">All the lab instruction guides are available</p>
+          <a class="card-link" href="https://ali-sadik.github.io/StudyMaterialsKUETECE/lab/lab.html" id="lab">Visit now</a>
+        </div>
+      </div>
+      <div class="mb-30 col-md-6 col-lg-4">
+        <div class="card">
+          <img class="card-icon" src="qb.jpg" alt="qb">
+          <h3 class="card-title">Question bank</h3>
+          <p class="card-text">All the term final and class test questions are available here</p>
+          <a class="card-link" href="https://ali-sadik.github.io/StudyMaterialsKUETECE/qb/qb.html" id="qb">Visit now</a>
+        </div>
+      </div>
+      <div class="mb-30 col-md-6 col-lg-4">
+        <div class="card">
+          <img class="card-icon" src="slide.jpg" alt="slide">
+          <h3 class="card-title">Slideshows</h3>
+          <p class="card-text">Download the powerpoint presentations provided by the course teacher</p>
+          <a class="card-link" href="https://ali-sadik.github.io/StudyMaterialsKUETECE/slide/slide.html" id="slide">Visit now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Function to show progress bar for 1 second
+    function showProgressBar(callback) {
+        // Show progress bar
+        document.getElementById("progress-bar").style.display = "block";
+
+        // Hide progress bar after 1 second
+        setTimeout(function () {
+          document.getElementById("progress-bar").style.display = "none";
+          if (callback) {
+            callback(); // Execute callback function
+          }
+        }, 1000);
+      }
+
+          document
+        .getElementById("contri")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default link behavior
+          showProgressBar(function () {
+            window.location.href = "http://192.168.0.102:3010"; // Redirect after progress bar animation completes
+          }); // Show progress bar when link is clicked
+        });
+        document
+        .getElementById("faculty")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default link behavior
+          showProgressBar(function () {
+            window.location.href = "http://192.168.0.102:3011"; // Redirect after progress bar animation completes
+          }); // Show progress bar when link is clicked
+        });
+        document
+        .getElementById("notes")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default link behavior
+          showProgressBar(function () {
+            window.location.href = "https://ali-sadik.github.io/StudyMaterialsKUETECE/notes/notes.html"; // Redirect after progress bar animation completes
+          }); // Show progress bar when link is clicked
+        });
+        document
+        .getElementById("books")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default link behavior
+          showProgressBar(function () {
+            window.location.href = "https://ali-sadik.github.io/StudyMaterialsKUETECE/books/books.html"; // Redirect after progress bar animation completes
+          }); // Show progress bar when link is clicked
+        });
+        document
+        .getElementById("lab")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default link behavior
+          showProgressBar(function () {
+            window.location.href = "https://ali-sadik.github.io/StudyMaterialsKUETECE/lab/lab.html"; // Redirect after progress bar animation completes
+          }); // Show progress bar when link is clicked
+        });
+        document
+        .getElementById("qb")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default link behavior
+          showProgressBar(function () {
+            window.location.href = "https://ali-sadik.github.io/StudyMaterialsKUETECE/qb/qb.html"; // Redirect after progress bar animation completes
+          }); // Show progress bar when link is clicked
+        });
+        document
+        .getElementById("slide")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default link behavior
+          showProgressBar(function () {
+            window.location.href = "https://ali-sadik.github.io/StudyMaterialsKUETECE/slide/slide.html"; // Redirect after progress bar animation completes
+          }); // Show progress bar when link is clicked
+        });
+        document
+        .getElementById("slide")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default link behavior
+          showProgressBar(function () {
+            window.location.href = "https://ali-sadik.github.io/StudyMaterialsKUETECE/slide/slide.html"; // Redirect after progress bar animation completes
+          }); // Show progress bar when link is clicked
+        });
+        document
+        .getElementById("1st")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default link behavior
+          showProgressBar(function () {
+            window.location.href = "1styear.html"; // Redirect after progress bar animation completes
+          }); // Show progress bar when link is clicked
+        });
+
+
+      window.addEventListener("load", function () {
+        showProgressBar(); // Show progress bar on page load
+      });
+
+
+    // Close the navbar when a menu item is clicked
+    $(document).on('click', '.navbar-collapse.show', function(e) {
+      if ($(e.target).is('a')) {
+        $(this).collapse('hide');
+      }
+    });
+    
+  </script>
+  
+</body>
+</html>
