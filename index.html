@@ -1,121 +1,617 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/ico" href="favicon.ico">
-  <title>StudyMaterials</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
-  <!-- Google Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
-  <link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet"> <!-- Importing Manrope font -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, private">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>ECE homepage</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..700&display=swap");
+    body {
+  font-family: 'Manrope', sans-serif;
+  font-weight: normal;
+  background: white;
+  overflow-x: hidden;
+  position: relative;
+}
+/* Default scrollbar styles */
+body::-webkit-scrollbar {
+        width: 12px; /* Width of the scrollbar */
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background-color: var(
+          --scrollbar-thumb-color,
+          #ccc
+        ); /* Default thumb color */
+        border-radius: 6px; /* Rounded corners of the scrollbar thumb */
+      }
+
+      /* Dark mode scrollbar styles */
+      body.dark-mode::-webkit-scrollbar-thumb {
+        background-color: var(
+          --scrollbar-thumb-color,
+          #333
+        ); /* Dark mode thumb color */
+      }
+
+      /* Light mode scrollbar styles */
+      body.light-mode::-webkit-scrollbar-thumb {
+        background-color: var(
+          --scrollbar-thumb-color,
+          #ccc
+        ); /* Light mode thumb color */
+      }
+
+body.dark-mode {
+        background-color: black;
+        color: white;
+      }
+.main {
+  position: relative;
+  padding: 60px 30px;
+  width: 100%;
+  color: Black;
+}
+body.dark-mode .main {
+  position: relative;
+  padding: 60px 30px;
+  width: 100%;
+  color: white;
+}
+.title
+{
+    text-align: center;
+    font-size: 40px;
+    margin-left: 60px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+.title-para
+{
+    text-align: center;
+    margin-left: 350px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.menuToggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  z-index: 999;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.menuToggle a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .menuToggle a {
+  color: white;
+}
+body.dark-mode .menuToggle a:hover {
+  color: #00a651;
+}
+
+.menuToggle a:hover {
+  color: #00a651;
+}
+
+.menuToggle input {
+  display: block;
+  margin-left: -8px;
+  width: 45px;
+  height: 37px;
+  position: absolute;
+  top: -7px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+.menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #00a651;
+  border-radius: 30px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+}
+
+.menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+.menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+.menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #00a651;
+}
+
+.menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+.menuToggle input:checked ~ .menuItem {
+  transform: none;
+}
+
+.menuItem {
+  position: absolute;
+  width: 250px;
+  height: 780px;
+  padding: 50px;
+  padding-top: 125px;
+  background: transparent;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+body.dark-mode .menuItem {
+  background: #222222;
+}
+
+.menuItem li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+.menu--left {
+  position: relative;
+  width: 50%;
+  margin-left: -20px;
+}
+
+.menu--left .menuToggle {
+  left: 0;
+}
+
+.menu--left .menuToggle input {
+  left: 50px;
+}
+
+.menu--left .menuToggle span {
+  left: 50px;
+}
+
+.menu--left .menuItem {
+  left: 50px;
+  margin: -100px 0 0 -50px;
+  transform: translate(-100%, 0);
+}
+
+
+@keyframes text-slide-in {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.sm-card {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 800px;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  margin: 1.7vh auto;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 6vh 3%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+body.dark-mode .sm-card {
+    background-color: #0a0a0a;
+        color: #ffffff;
+        border: 1px solid #888;
+}
+.sm-card:hover {
+        box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
+        transform: scale(1.03);
+    }
+    body.dark-mode .sm-card:hover {
+        box-shadow: 0 0 100px rgba(255, 255, 255, 0.3);
+      }
+      .sm-card:hover h1 {
+        color: #00a651;
+      }
+h1 {
+  font-size: 170%;
+  position: relative;
+  z-index: 10;
+  transition: color 0.5s ease;
+}
+span {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  margin-right: 80px;
+  color: rgb(210, 210, 210);
+}
+.visit {
+  display: block;
+  border: 1px solid white;
+  border-radius: 8px;
+  position: relative;
+  z-index: 10;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, .3);
+  margin: 20px 0px;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  transition: all .2s;
+}
+button:hover {
+  background: rgba(255, 255, 255, .8);
+  color: black;
+
+}
+button:active {
+  transform: translateY(2px);
+}
+p {
+  position: relative;
+  z-index: 10;
+  font-size: .8em;
+  width: 60%;
+  height: 35%;
+}
+
+@media (max-width: 768px) {
+    .menuItem {
+  position: absolute;
+  width: 250px;
+  height: 780px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #eee;
+}
+body.dark-mode .sm-card:hover {
+        box-shadow: none;
+      }
+.menuToggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  margin-left: -10px;
+  z-index: 999;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.menuItem li {
+  font-size: 15px;
+}
+    .title
+{
+    text-align: center;
+    font-size: 20px;
+    margin-left: 90px;
+    margin-top: -40px;
+    margin-bottom: 0px;
+}
+.title-para
+{
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+  .sm-card {
+    width: 120%;
+    height: 200px;
+    margin-left: -30px;
+  }
+  .sm-card:hover
+  {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+  }
+  .sm-card:hover h1
+  {
+    color: white;
+  }
+  h1 {
+  font-size: 140%;
+  text-align: left;
+  }
+  p {
+    font-size: 12px;
+    overflow: hidden;
+    width: 100%;
+    height: 30%;
+    text-align: left;
+  }
+  .des
+  {
+    font-size: 14px;
+  }
+  .visit {
+    margin: 5% auto;
+    padding: 10px 40px;
+  }
+}
+
+/* Toggle Switch Styles */
+.toggle-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+      }
+
+      .toggle-switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+
+      .toggle-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 34px;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+
+      input:checked + .slider {
+        background-color: #00a651;
+      }
+
+      input:checked + .slider:before {
+        transform: translateX(26px);
+      }
+      #progress-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: transparent;
+        z-index: 9999;
+      }
+
+      #progress-bar {
+        height: 4px;
+        background-color: #00a651;
+        width: 0;
+        animation: progressBarAnimation 1s forwards;
+      }
+
+      @keyframes progressBarAnimation {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+  </style>
 </head>
 <body>
-  <div id="progress-container">
-    <div id="progress-bar"></div>
-  </div>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <div class="container">
-      <!-- Logo -->
-      <a class="navbar-brand" href="index.html"><img src="log.png" alt="StudyMaterials Logo" style="height: 40px;"></a>
-      <!-- Burger menu button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Navbar links -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="1styear.html" target="_blank" id="1st">1st year</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://kuet-study-materials.vercel.app/dev.html" target="_blank" id="2nd">2nd year</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://kuet-study-materials.vercel.app/dev.html">3rd year</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://kuet-study-materials.vercel.app/dev.html">4th year</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://teamsiliconx.github.io/aboutus">About us</a>
-          </li>
-        </ul>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
       </div>
+
+<header>
+  <nav id="sidebar" class="menu--left" role="navigation">
+    <div class="menuToggle">
+      <input type="checkbox"/>
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul class="menuItem">
+        <li><a id="contribution">Upload files</a></li>
+        <li><a id="topcontri">Top contributors</a></li>
+        <li><a id="first">1st year</a></li>
+        <li><a id="second">2nd year</a></li>
+        <li><a id="third">3rd year</a></li>
+        <li><a id="fourth">4th year</a></li>
+        <li><a id="about">About us</a></li>
+        <li><a id="logout">Logout</a></li>
+      </ul>
     </div>
   </nav>
 
-  
-  <section class="banner">
-    <div class="container">
-      <div class="banner-text">
-        <h1 style="user-select: none;">Hello there!</h1>
-        <p style="user-select: none;"><strong>Welcome to the StudyMaterials</strong></br>Contribute your valuable resources</p>
-        <a href="https://contribution-corner.vercel.app/" target="_blank"><button id="contri">Contribute now</button></a>
-      </div>
-    </div>
-    <img class="banner-image" src="home.png" alt="monitoring">
-  </section>
-
-  <div class="container">
-    <div class="row">
-      <div class="mb-30 col-md-6 col-lg-4">
-        <div class="card">
-          <img class="card-icon" src="faculty.png" alt="faculty">
-          <h3 class="card-title">Faculty Members</h3>
-          <p class="card-text">Visit the student corner to get your necessary course resources from your course teacher</p>
-          <a class="card-link" href="https://faculty-members-ece.vercel.app/" target="_blank" id="faculty">Visit now</a>
-        </div>
-      </div>
-      <div class="mb-30 col-md-6 col-lg-4">
-        <div class="card">
-          <img class="card-icon" src="notes.jpg" alt="notes">
-          <h3 class="card-title">Notes</h3>
-          <p class="card-text">Handwritten notes from the students</p>
-          <a class="card-link" href="https://study-materials-ece.vercel.app/notes/notes.html" id="notes">Visit now</a>
-        </div>
-      </div>
-      <div class="mb-30 col-md-6 col-lg-4">
-        <div class="card">
-          <img class="card-icon" src="books.jpg" alt="books">
-          <h3 class="card-title">Books</h3>
-          <p class="card-text">Download your necessary reference books from here</p>
-          <a class="card-link" href="https://study-materials-ece.vercel.app/books/books.html" id="books">Download now</a>
-        </div>
-      </div>
-      <div class="mb-30 col-md-6 col-lg-4">
-        <div class="card">
-          <img class="card-icon" src="lab.jpg" alt="lab manuals">
-          <h3 class="card-title">Lab manuals</h3>
-          <p class="card-text">All the lab instruction guides are available</p>
-          <a class="card-link" href="https://study-materials-ece.vercel.app/lab/lab.html" id="lab">Visit now</a>
-        </div>
-      </div>
-      <div class="mb-30 col-md-6 col-lg-4">
-        <div class="card">
-          <img class="card-icon" src="qb.jpg" alt="qb">
-          <h3 class="card-title">Question bank</h3>
-          <p class="card-text">All the term final and class test questions are available here</p>
-          <a class="card-link" href="https://study-materials-ece.vercel.app/qb/qb.html" id="qb">Visit now</a>
-        </div>
-      </div>
-      <div class="mb-30 col-md-6 col-lg-4">
-        <div class="card">
-          <img class="card-icon" src="slide.jpg" alt="slide">
-          <h3 class="card-title">Slideshows</h3>
-          <p class="card-text">Download the powerpoint presentations provided by the course teacher</p>
-          <a class="card-link" href="https://study-materials-ece.vercel.app/slide/slide.html" id="slide">Visit now</a>
-        </div>
-      </div>
-    </div>
+<main class="main">
+  <h1 class="title">Welcome <strong><span style="color: #00a651;">Home</span></strong></h1>
+  <div class="content">
+    <p class="title-para">
+      Here you can find all of your study materials.
+    </p>
   </div>
-
-  <!-- Bootstrap JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-  <script>
+  <div class="container">
+    <!-- Movie Cards Section -->
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="sm-card" style="background-image: linear-gradient(
+          75deg,
+          rgb(6 6 6 / 80%) 8%,
+          transparent
+        ),url('users.jpg')">
+          <div class="card-content">
+            <h1>Student Corners</h1>
+            <span class="des">Total files: 12,459</span>
+            <p>Look what your teacher has been sharing with you.</p>
+            <button class="visit" id="corner">Visit now</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-lg-6">
+        <div class="sm-card" style="background-image:linear-gradient(
+          75deg,
+          rgb(6 6 6 / 80%) 8%,
+          transparent
+        ),url('slide.jpg')">
+          <div class="card-content">
+            <h1>Slideshows</h1>
+            <span class="des">Total files:23,567</span>
+            <p>Slides archieve</p>
+            <button class="visit" id="slides">Visit now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="sm-card" style="background-image: linear-gradient(
+          75deg,
+          rgb(6 6 6 / 80%) 8%,
+          transparent
+        ),url('notes.jpg')">
+          <div class="card-content">
+            <h1>Notes</h1>
+            <span class="des">Total files: 34,678</span>
+            <p>Grabs your notes.Contribute yourself.</p>
+            <button class="visit" id="notes">Visit now</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-lg-6">
+        <div class="sm-card" style="background-image: linear-gradient(
+          75deg,
+          rgb(6 6 6 / 80%) 8%,
+          transparent
+        ),url('manuals.jpg')">
+          <div class="card-content">
+            <h1>Lab Manuals</h1>
+            <span class="des">Total files: 3,679</span>
+            <p>Sessional course manuals</p>
+            <button class="visit" id="lab">Visit now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+          <div class="sm-card" style="background-image: linear-gradient(
+            75deg,
+            rgb(6 6 6 / 80%) 8%,
+            transparent
+          ),url('qb.jpg')">
+            <div class="card-content">
+              <h1>Question Bank</h1>
+              <span class="des">Total files: 14,678</span>
+              <p>Exam question archieves</p>
+              <button class="visit" id="qb">Visit now</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-6">
+          <div class="sm-card" style="background-image: linear-gradient(
+            75deg,
+            rgb(6 6 6 / 80%) 8%,
+            transparent
+          ),url('softhigh.jpg')">
+            <div class="card-content">
+              <h1>Softwares</h1>
+              <span class="des">Total softwares: 479</span>
+              <p>Software archieves</p>
+              <button class="visit" id="softwares">Download now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="sm-card" style="background-image: linear-gradient(
+            75deg,
+            rgb(6 6 6 / 80%) 8%,
+            transparent
+          ),url('books.jpg')">
+            <div class="card-content">
+              <h1>Books</h1>
+              <span class="des">Total files: 34,678</span>
+              <p>The ocean of reference books.Find your desired ones.</p>
+              <button class="visit" id="books">Download now</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-6">
+          <div class="sm-card" style="background-image: linear-gradient(
+            75deg,
+            rgb(6 6 6 / 80%) 8%,
+            transparent
+          ),url('join.jpg')">
+            <div class="card-content">
+              <h1>Join our team</h1>
+              <p>Want to join our team and develop this platform?Then hit the button!</p>
+              <button class="visit" id="join">Join now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</main>
+<div class="toggle-container">
+    <p class="darktext">Dark mode</p>
+    <label class="toggle-switch">
+      <input type="checkbox" id="theme-toggle" />
+      <span class="slider"></span>
+    </label>
+  </div>
+<script>
     // Function to show progress bar for 1 second
     function showProgressBar(callback) {
         // Show progress bar
@@ -129,86 +625,154 @@
           }
         }, 1000);
       }
-
-          document
-        .getElementById("contri")
-        .addEventListener("click", function (event) {
-          event.preventDefault(); // Prevent default link behavior
-          showProgressBar(function () {
-            window.location.href = "https://contribution-corner.vercel.app/"; // Redirect after progress bar animation completes
-          }); // Show progress bar when link is clicked
-        });
-        document
-        .getElementById("faculty")
-        .addEventListener("click", function (event) {
-          event.preventDefault(); // Prevent default link behavior
-          showProgressBar(function () {
-            window.location.href = "https://faculty-members-ece.vercel.app/"; // Redirect after progress bar animation completes
-          }); // Show progress bar when link is clicked
-        });
-        document
-        .getElementById("notes")
-        .addEventListener("click", function (event) {
-          event.preventDefault(); // Prevent default link behavior
-          showProgressBar(function () {
-            window.location.href = "https://study-materials-ece.vercel.app/notes/notes.html"; // Redirect after progress bar animation completes
-          }); // Show progress bar when link is clicked
-        });
-        document
-        .getElementById("books")
-        .addEventListener("click", function (event) {
-          event.preventDefault(); // Prevent default link behavior
-          showProgressBar(function () {
-            window.location.href = "https://study-materials-ece.vercel.app/books/books.html"; // Redirect after progress bar animation completes
-          }); // Show progress bar when link is clicked
-        });
-        document
-        .getElementById("lab")
-        .addEventListener("click", function (event) {
-          event.preventDefault(); // Prevent default link behavior
-          showProgressBar(function () {
-            window.location.href = "https://study-materials-ece.vercel.app/lab/lab.html"; // Redirect after progress bar animation completes
-          }); // Show progress bar when link is clicked
-        });
-        document
-        .getElementById("qb")
-        .addEventListener("click", function (event) {
-          event.preventDefault(); // Prevent default link behavior
-          showProgressBar(function () {
-            window.location.href = "https://study-materials-ece.vercel.app/qb/qb.html"; // Redirect after progress bar animation completes
-          }); // Show progress bar when link is clicked
-        });
-        document
-        .getElementById("slide")
-        .addEventListener("click", function (event) {
-          event.preventDefault(); // Prevent default link behavior
-          showProgressBar(function () {
-            window.location.href = "https://study-materials-ece.vercel.app/slide/slide.html"; // Redirect after progress bar animation completes
-          }); // Show progress bar when link is clicked
-        });
-        document
-        .getElementById("1st")
-        .addEventListener("click", function (event) {
-          event.preventDefault(); // Prevent default link behavior
-          showProgressBar(function () {
-            window.location.href = "1styear.html"; // Redirect after progress bar animation completes
-          }); // Show progress bar when link is clicked
-        });
-
-
       window.addEventListener("load", function () {
         showProgressBar(); // Show progress bar on page load
       });
 
+ // Get references to elements
+const navToggle = document.querySelector('.menuToggle input');
 
-    // Close the navbar when a menu item is clicked
-    $(document).on('click', '.navbar-collapse.show', function(e) {
-      if ($(e.target).is('a')) {
-        $(this).collapse('hide');
-      }
+// Function to disable scrolling
+function disableScrolling() {
+  document.body.style.overflow = 'hidden';
+  document.body.style.position = 'fixed';
+  document.body.style.width = '100%';
+}
+
+// Function to enable scrolling
+function enableScrolling() {
+  document.body.style.overflow = '';
+  document.body.style.position = '';
+  document.body.style.width = '';
+}
+
+// Add event listener for checkbox change (menu toggle)
+navToggle.addEventListener('change', function() {
+  if (this.checked) {
+    // If checkbox is checked (menu is opened), disable body scrolling
+    disableScrolling();
+  } else {
+    // If checkbox is unchecked (menu is closed), enable body scrolling
+    enableScrolling();
+  }
+});
+
+// Ensure to handle resizing properly
+window.addEventListener('resize', function() {
+  if (window.innerWidth >= 768) {
+    enableScrolling();
+    navToggle.checked = false;
+  }
+});
+
+// Check initially if menu is opened on load
+if (navToggle.checked) {
+  disableScrolling();
+}
+
+document.addEventListener("DOMContentLoaded", (event) => {
+        const toggleButton = document.getElementById("theme-toggle");
+
+        // Function to set theme
+        const setTheme = (theme) => {
+          if (theme === "dark-mode") {
+            document.body.classList.add("dark-mode");
+            document.body.classList.remove("light-mode");
+            toggleButton.checked = true;
+          } else {
+            document.body.classList.remove("dark-mode");
+            document.body.classList.add("light-mode");
+            toggleButton.checked = false;
+          }
+          updateScrollbarColor(theme); // Update scrollbar color based on theme
+        };
+
+        // Function to detect and apply system theme preference
+        const applySystemThemePreference = () => {
+          const prefersDarkScheme = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+          ).matches;
+          setTheme(prefersDarkScheme ? "dark-mode" : "light-mode");
+        };
+
+        // Load user's theme preference from localStorage
+        const currentTheme = localStorage.getItem("theme");
+        if (currentTheme) {
+          setTheme(currentTheme);
+        } else {
+          applySystemThemePreference(); // Apply system theme preference initially
+        }
+
+        // Listen for changes in the theme toggle button
+        toggleButton.addEventListener("change", () => {
+          const newTheme = toggleButton.checked ? "dark-mode" : "light-mode";
+          setTheme(newTheme);
+          // Save user's preference to localStorage
+          if (newTheme === "dark-mode") {
+            localStorage.setItem("theme", "dark-mode");
+          } else {
+            localStorage.removeItem("theme");
+          }
+        });
+
+        // Listen for changes in system theme preference
+        window
+          .matchMedia("(prefers-color-scheme: dark)")
+          .addEventListener("change", (e) => {
+            if (!localStorage.getItem("theme")) {
+              // Only change if user has not set a preference
+              applySystemThemePreference();
+            }
+          });
+
+        // Function to update scrollbar color based on theme
+        const updateScrollbarColor = (theme) => {
+          // Determine the scrollbar thumb color based on the theme
+          const scrollbarThumbColor = theme === "dark-mode" ? "#333" : "#ccc";
+          // Set the scrollbar thumb color dynamically using CSS variables
+          document.documentElement.style.setProperty(
+            "--scrollbar-thumb-color",
+            scrollbarThumbColor
+          );
+        };
+      });
+
+      const urlMapping = {
+  contribution: "https://contribution-corner.vercel.app/",
+  about: "aboutus.html",
+  topcontri: "https://kuet-study-materials.vercel.app/dev.html",
+  first : "1styear.html",
+  second :"https://kuet-study-materials.vercel.app/dev.html",
+  third :"https://kuet-study-materials.vercel.app/dev.html",
+  fourth :"https://kuet-study-materials.vercel.app/dev.html",
+  logout : "https://students-login.vercel.app/login",
+  corner: "https://faculty-members-ece.vercel.app/",
+  slides: "https://study-materials-ece.vercel.app/slide/slide.html",
+  notes: "https://study-materials-ece.vercel.app/notes/notes.html",
+  lab: "https://study-materials-ece.vercel.app/lab/lab.html",
+  qb: "https://study-materials-ece.vercel.app/qb/qb.html",
+  softwares: "https://kuet-study-materials.vercel.app/dev.html",
+  books: "https://study-materials-ece.vercel.app/books/books.html",
+  join: "joinus.html"
+};
+
+Object.keys(urlMapping).forEach(id => {
+  document.getElementById(id).addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent default link behavior
+    showProgressBar(function () {
+      window.location.href = urlMapping[id]; // Redirect after progress bar animation completes
+    }); // Show progress bar when link is clicked
+  });
+});
+
+document.getElementById('logout').addEventListener('click', function() {
+      // Clear local storage if necessary
+      localStorage.removeItem('token');
+
+      // Redirect to the logout route
+      window.location.href = '/logout';
     });
-    
-  </script>
-  
+
+</script>
 </body>
 </html>
