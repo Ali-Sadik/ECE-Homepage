@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+    <title>Meet the developers</title>
+    <style>
+      body {
+        align-items: center;
+        display: flex;
+        font-family: "Inter", sans-serif;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: white;
+      }
+      body.dark-mode {
+        background-color: #0a0a0a;
+      }
+      /* Default scrollbar styles */
+      body::-webkit-scrollbar {
+        width: 12px; /* Width of the scrollbar */
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background-color: var(
+          --scrollbar-thumb-color,
+          #ccc
+        ); /* Default thumb color */
+        border-radius: 6px; /* Rounded corners of the scrollbar thumb */
+      }
+
+      /* Dark mode scrollbar styles */
+      body.dark-mode::-webkit-scrollbar-thumb {
+        background-color: var(
+          --scrollbar-thumb-color,
+          #333
+        ); /* Dark mode thumb color */
+      }
+
+      /* Light mode scrollbar styles */
+      body.light-mode::-webkit-scrollbar-thumb {
+        background-color: var(
+          --scrollbar-thumb-color,
+          #ccc
+        ); /* Light mode thumb color */
+      }
+      h1 {
+        color: #00c2fc;
+        font-size: 60px;
+        margin-bottom: 30px;
+        margin-top: 60px;
+      }
+
+      .person {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 280px;
+        margin: 20px;
+      }
+
+      .container {
+        border-radius: 50%;
+        height: 312px;
+        -webkit-tap-highlight-color: transparent;
+        transform: scale(0.48);
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        width: 400px;
+      }
+
+      .container:hover {
+        transform: scale(0.5);
+      }
+
+      .container-inner {
+        clip-path: path(
+          "M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z"
+        );
+        position: relative;
+        transform-origin: 50%;
+        top: -200px;
+      }
+
+      .circle {
+        border-radius: 50%;
+        cursor: pointer;
+        height: 380px;
+        left: 10px;
+        pointer-events: none;
+        position: absolute;
+        top: 210px;
+        width: 380px;
+      }
+
+      .img {
+        pointer-events: none;
+        position: relative;
+        transform: translateY(20px) scale(1.15);
+        transform-origin: 50% bottom;
+        transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .container:hover .img {
+        transform: translateY(0) scale(1.2);
+      }
+
+      .img1 {
+        left: 22px;
+        top: 164px;
+        width: 340px;
+      }
+      .name {
+        color: black;
+        font-size: 25px;
+        margin-top: -20px;
+        font-weight: 600;
+        text-align: center;
+      }
+      body.dark-mode .name {
+        color: white;
+      }
+
+      .title {
+        color: black;
+        font-size: 15px;
+        margin-top: 5px;
+      }
+      .subtitle {
+        color: black;
+        font-size: 10px;
+        margin-top: 10px;
+        font-weight: 500;
+      }
+      body.dark-mode .title {
+        color: white;
+      }
+      .subtitle {
+        color: black;
+        font-size: 13px;
+        margin-top: 5px;
+      }
+      body.dark-mode .subtitle {
+        color: #cccccc;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+      }
+      .toggle-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+      }
+
+      .toggle-switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+
+      .toggle-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: poManrope;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 34px;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+
+      input:checked + .slider {
+        background-color: #00a651;
+      }
+
+      input:checked + .slider:before {
+        transform: translateX(26px);
+      }
+      @media (width < 768px) {
+        h1 {
+          text-align: center;
+          font-size: 30px;
+          margin-bottom: 0px;
+          margin-top: 60px;
+        }
+      }
+
+      .dev {
+        color: #00a651;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Meet the<span class="dev"> developers</span></h1>
+    <div id="team-container" class="row"></div>
+
+    <script>
+      const teamData = [
+        {
+          imgSrc: "me.png",
+          name: "Ali Ahmed Sadik",
+          title: "Co-founder & Project lead",
+          subtitle: "ECE 2K21",
+        },
+        {
+          imgSrc: "fahim.png",
+          name: "Fardin Alam Fahim",
+          title: "Co-founder & Team lead(Manuals)",
+          subtitle: "ECE 2K21",
+        },
+        {
+          imgSrc: "debraj.png",
+          name: "Debraj Rohan",
+          title: "Co-founder & Team lead(Notes)",
+          subtitle: "ECE 2K21",
+        },
+        {
+          imgSrc: "ramiya.png",
+          name: "Ramiya Reza",
+          title: "Co-founder & Team lead(QB)",
+          subtitle: "ECE 2K21",
+        },
+        {
+          imgSrc: "eesa.png",
+          name: "Eesa Ruhullah Ansari",
+          title: "Project manager & Team lead(Books)",
+          subtitle: "ECE 2K21",
+        },
+        {
+          imgSrc: "labib.png",
+          name: "Mahir Mohammed Labib",
+          title: "Quality Assurance (QA) Executive",
+          subtitle: "ECE 2K21",
+        },
+        {
+          imgSrc: "maliha.png",
+          name: "Sumaiya Haque Maliha",
+          title: "Quality Assurance (QA) Executive",
+          subtitle: "ECE 2K21",
+        },
+        {
+          imgSrc: "tabib.png",
+          name: "Tabib Wasitt Sharthok",
+          title: "Quality Assurance (QA) Executive",
+          subtitle: "ECE 2K21",
+        },
+        {
+          imgSrc: "tisha.png",
+          name: "Marufatul Zannath",
+          title: "Project manager(Notes)",
+          subtitle: "ECE 2K21",
+        },
+        {
+          imgSrc: "akib.png",
+          name: "Md. Akib Jawad",
+          title: "Project manager",
+          subtitle: "ECE 2K21",
+        },
+        {
+          imgSrc: "sinan.png",
+          name: "Awsaf Sinan",
+          title: "Project manager",
+          subtitle: "ECE 2K21",
+        },
+        {
+          imgSrc: "argho.png",
+          name: "Argho Sen",
+          title: "Junior web developer(QB)",
+          subtitle: "ECE 2K22",
+        },
+        {
+          imgSrc: "raja.png",
+          name: "Hamid Shahriar",
+          title: "Junior web developer(QA)",
+          subtitle: "ECE 2K22",
+        },
+        {
+          imgSrc: "iyaad.png",
+          name: "Aminul Islam Iyad",
+          title: "Junior web developer(Notes)",
+          subtitle: "ECE 2K22",
+        },
+        {
+          imgSrc: "roy.png",
+          name: "Arijit Roy",
+          title: "Junior web developer(Notes)",
+          subtitle: "ECE 2K22",
+        },
+        {
+          imgSrc: "pushpo.png",
+          name: "Israt Jahan Pushpo",
+          title: "Junior web developer(QA)",
+          subtitle: "ECE 2K22",
+        },
+        {
+          imgSrc: "dipto.png",
+          name: "Zulfiqar Siddique",
+          title: "Junior web developer(QB)",
+          subtitle: "ECE 2K22",
+        },
+        {
+          imgSrc: "israt.png",
+          name: "Israt Jahan",
+          title: "Junior web developer(Manuals)",
+          subtitle: "ECE 2K22",
+        },
+        {
+          imgSrc: "sami.png",
+          name: "Samiul Islam Khan Sami",
+          title: "Junior web developer(Books)",
+          subtitle: "ECE 2K22",
+        },
+        {
+          imgSrc: "sayanta.png",
+          name: "Sayanta Das",
+          title: "Junior web developer(Notes)",
+          subtitle: "ECE 2K22",
+        },
+        {
+          imgSrc: "mah.png",
+          name: "MD. Mahmudul Hassan",
+          title: "Junior web developer(Books)",
+          subtitle: "ECE 2K22",
+        },
+        {
+          imgSrc: "pias.png",
+          name: "Pias Das",
+          title: "Junior web developer(Manuals)",
+          subtitle: "ECE 2K22",
+        },
+      ];
+
+      function createCard(member) {
+        const card = document.createElement("div");
+        card.className = "person";
+
+        const container = document.createElement("div");
+        container.className = "container";
+
+        const containerInner = document.createElement("div");
+        containerInner.className = "container-inner";
+
+        const circle = document.createElement("img");
+        circle.className = "circle";
+        circle.src = "smlogo.jpg";
+
+        const img = document.createElement("img");
+        img.className = "img img1";
+        img.src = member.imgSrc;
+
+        containerInner.appendChild(circle);
+        containerInner.appendChild(img);
+        container.appendChild(containerInner);
+
+        const name = document.createElement("div");
+        name.className = "name";
+        name.textContent = member.name;
+
+        const title = document.createElement("div");
+        title.className = "title";
+        title.textContent = member.title;
+
+        const subtitle = document.createElement("div");
+        subtitle.className = "subtitle";
+        subtitle.textContent = member.subtitle;
+
+        card.appendChild(container);
+        card.appendChild(name);
+        card.appendChild(title);
+        card.appendChild(subtitle);
+
+        return card;
+      }
+
+      const teamContainer = document.getElementById("team-container");
+      teamData.forEach((member) => {
+        teamContainer.appendChild(createCard(member));
+      });
+
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const toggleButton = document.getElementById("theme-toggle");
+
+        // Function to set theme
+        const setTheme = (theme) => {
+          if (theme === "dark-mode") {
+            document.body.classList.add("dark-mode");
+            document.body.classList.remove("light-mode");
+            toggleButton.checked = true;
+          } else {
+            document.body.classList.remove("dark-mode");
+            document.body.classList.add("light-mode");
+            toggleButton.checked = false;
+          }
+          updateScrollbarColor(theme); // Update scrollbar color based on theme
+        };
+
+        // Function to detect and apply system theme preference
+        const applySystemThemePreference = () => {
+          const prefersDarkScheme = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+          ).matches;
+          setTheme(prefersDarkScheme ? "dark-mode" : "light-mode");
+        };
+
+        // Load user's theme preference from localStorage
+        const currentTheme = localStorage.getItem("theme");
+        if (currentTheme) {
+          setTheme(currentTheme);
+        } else {
+          applySystemThemePreference(); // Apply system theme preference initially
+        }
+
+        // Listen for changes in the theme toggle button
+        toggleButton.addEventListener("change", () => {
+          const newTheme = toggleButton.checked ? "dark-mode" : "light-mode";
+          setTheme(newTheme);
+          // Save user's preference to localStorage
+          if (newTheme === "dark-mode") {
+            localStorage.setItem("theme", "dark-mode");
+          } else {
+            localStorage.removeItem("theme");
+          }
+        });
+
+        // Listen for changes in system theme preference
+        window
+          .matchMedia("(prefers-color-scheme: dark)")
+          .addEventListener("change", (e) => {
+            if (!localStorage.getItem("theme")) {
+              // Only change if user has not set a preference
+              applySystemThemePreference();
+            }
+          });
+
+        // Function to update scrollbar color based on theme
+        const updateScrollbarColor = (theme) => {
+          // Determine the scrollbar thumb color based on the theme
+          const scrollbarThumbColor = theme === "dark-mode" ? "#333" : "#ccc";
+          // Set the scrollbar thumb color dynamically using CSS variables
+          document.documentElement.style.setProperty(
+            "--scrollbar-thumb-color",
+            scrollbarThumbColor
+          );
+        };
+      });
+    </script>
+    <div class="toggle-container">
+      <p class="darktext">Dark mode</p>
+      <label class="toggle-switch">
+        <input type="checkbox" id="theme-toggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+  </body>
+</html>
